@@ -1,0 +1,140 @@
+:root {
+    --bg-light: #ffffff;
+    --bg-dark: #7a7a7a;
+    --bg-light-header: #07beb8;
+    --bg-dark-header: #111111;
+    --text-light: #111111;
+    --text-dark: #ffffff;
+    --border-radius: 12px;
+    --transition-speed: 0.3s;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark header{
+    background-color: var(--bg-dark-header);
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#themeIcon{
+    font-size: 1.8rem;
+}
+
+#themeIcon:hover{
+    cursor: pointer;
+}
+
+header {
+    height: 70px;
+    background-color: var(--bg-light-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+select {
+    right: 110px;
+    position: absolute;
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+#searchInput{
+    background-color: #ffffff;
+    color: #111111;
+}
+
+input {
+    width: 60%;
+    max-width: 400px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid black;
+    outline: none;
+}
+
+input::placeholder{
+    background-color: var(--bg-light);
+    color: var(--text-light);
+}
+
+body.dark input {
+    background-color: var(--input-dark);
+    color: var(--text-dark);
+    border: 1px solid #444;
+}
+
+button {
+    font-size: 1.7rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    border: 2px solid black;
+    border-radius: var(--border-radius);
+    background-color: var(--header);
+    color: black;
+    cursor: pointer;
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: var(--bg-light-header);
+}
+
+body.dark button:hover {
+    transform: scale(1.05);
+    background-color: var(--bg-dark-header);
+    color: var(--bg-light);
+}
+
+main {
+    width: 60%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+#resultContainer {
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--header);
+}

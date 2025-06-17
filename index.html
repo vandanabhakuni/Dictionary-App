@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionary App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Dictionary</h1>
+        <select id="fontSelector">
+            <option value="serif">Serif</option>
+            <option value="sans-serif">Sans Serif</option>
+            <option value="monospace">Monospace</option>
+        </select>
+        <div id="themeToggle">
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="icon" id="themeIcon">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                </span>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <input type="text" id="searchInput" placeholder="Search for a word..." />
+        <button onclick="searchWord()">
+            <span class="icon" id="searchIcon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </button>
+        <div id="resultContainer"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
